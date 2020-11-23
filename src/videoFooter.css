@@ -1,0 +1,113 @@
+.videofooter{
+    color: white;
+    position: relative;
+    margin: 0px;
+    left: 0px;
+    bottom: 120px;  
+  
+
+}
+.userinformation{
+    flex: 0.95;
+    margin: 0px;
+      display: flex;
+      flex-direction: column;
+    align-items: flex-start;
+    padding-left: 10px;
+
+    
+}
+h3{
+    font-weight: 800;
+    font-size: 15px;
+
+}
+p{
+    font-weight: 500;
+    font-size: 12px;
+
+}
+.description{
+    margin-top: 5px;
+}
+.finalFoot{
+    display: flex;
+
+}
+.recorder{
+    animation: spin infinite 2s linear;
+    height: 40px;
+    width: 40px;
+    filter: invert(1);
+
+ /* padding-right: 20px; */
+     
+}
+@keyframes spin{
+  from {
+      transform: rotate(0deg);
+  }  
+   to {
+      transform: rotate(360deg);
+  }  
+}
+.library{
+    margin-top: 12px;
+    color: white;
+      
+    /* height: 20px;
+    width: 500px; */
+}
+
+.audioPart{
+    display: flex;
+    flex-direction: row;
+}
+
+.tik{
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  margin-left: 15px;
+}
+/* OUTER CONTAINER */
+.tcontainer {
+  width: 170px;
+  margin-top: 15px;
+  margin-left: 10px;
+  overflow: hidden; /* Hide scroll bar */
+}
+ 
+/* MIDDLE CONTAINER */
+.ticker-wrap {
+  width: 50%;
+  padding-left: 100%; /* Push contents to right side of screen */
+
+}
+
+/* INNER CONTAINER */
+@keyframes ticker {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-100%, 0, 0); }
+}
+.ticker-move {
+  /* Basically move items from right side of screen to left in infinite loop */
+  display: inline-block;
+  white-space: nowrap;
+padding-right: 90%;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-name: ticker;
+  animation-duration: 10s;
+}
+.ticker-move:hover{
+  animation-play-state: paused; /* Pause scroll on mouse hover */
+}
+
+/* ITEMS */
+.ticker-item{
+  display: inline-block;
+  padding: 0rem;
+  font-size: 12px;
+
+}
