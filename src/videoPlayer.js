@@ -1,10 +1,10 @@
 import React, { Component, useRef, useState } from "react";
 import  "./index.css";
-import source from "./126149333_380527723199057_624273093093858616_n.mp4";
+
 import VideoControls from "./VideoControls.js"
 import VideoFooter from "./VideoFooter.js";
 import "./index.css";
-function Video({audioone,channelone, descriptionone }) {
+function Video({audioone,channelone, descriptionone, likevalone, commentvalone, sharevalone , source}) {
     const [playing, setPlaying] = useState(false);
 
     const videoRef = useRef(null);
@@ -26,6 +26,7 @@ function Video({audioone,channelone, descriptionone }) {
         {/* <img src="logo.svg"/> */}
       
     <video src={source} className="orientation" loop  onClick= {onvideoPress} ref={videoRef} />
+    <VideoControls likeval= {likevalone} commentval= {commentvalone}  sharval= {sharevalone}/>
       <VideoFooter audio={audioone} channel={channelone} description={descriptionone} />
    
         </div>
